@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samsung Galaxy S26 Ultra</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+body{   
+    font-family:Arial, sans-serif;
+    margin:0;
+    background:#fff;
+    color:#111;
+}
+
+.logo{ 
+    font-size:20px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #eee;
+}
+
+.menu a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:#000;
+}
+
+#home,#fitur,#spesifikasi,#beli{
+    scroll-margin-top:80px;
+}
+
+/* ===== PRODUCT ===== */
+.product{
+    text-align:center;
+    padding:70px 0;
+}
+
+.product img{
+    width:100%;
+    max-width:500px;
+    margin-top:30px;
+}
+
+.price{
+    font-size:26px;
+    margin-top:20px;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color:#999;
+    font-size:14px;
+}
+
+input[type="radio"]{
+display:none;
+}
+
+.gambar{
+max-width:500px;
+margin:30px auto;
+}
+
+.img{
+width:100%;
+display:none;
+}
+
+#black:checked ~ .gambar .black-img{display:block;}
+#white:checked ~ .gambar .white-img{display:block;}
+#silver:checked ~ .gambar .silver-img{display:block;}
+#blue:checked ~ .gambar .blue-img{display:block;}
+
+
+.pilihan{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+.color{
+width:30px;
+height:30px;
+border-radius:50%;
+border:2px solid #ccc;
+cursor:pointer;
+}
+
+.black{background:black;}
+.white{background:white;}
+.silver{background:gray;}
+.blue{background:skyblue;}
+
+#black:checked ~ .pilihan label[for="black"],
+#white:checked ~ .pilihan label[for="white"],
+#silver:checked ~ .pilihan label[for="silver"],
+#blue:checked ~ .pilihan label[for="blue"]{
+border:2px solid black;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    background:#000;
+    color:#fff;
+    padding:12px 26px;
+    border-radius:25px;
+    text-decoration:none;
+    margin-top:20px;
+}
+
+.btn:hover{
+    background:#333;
+}
+
+/* ===== FITUR ===== */
+.fitur{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+    margin:60px 0;
+    text-align:center;
+}
+
+.card{
+    padding:20px;
+    border:1px solid #eee;
+    border-radius:10px;
+}
+
+/* ===== SPESIFIKASI ===== */
+.specs{
+    max-width:650px;
+    margin:60px auto;
+    text-align: center;
+}
+
+.spec-item{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #eee;
+    padding:12px 0;
+}
+
+.spec-title{
+    font-weight:bold;
+}
+
+.pesan{
+    text-align:center;
+    margin:70px 0;
+}
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:30px 0;
+    color:#888;
+    border-top:1px solid #eee;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">SAMSUNG</div>
+
+<div class="menu">
+<a href="#home">Galaxy S26 Ultra</a>
+<a href="#fitur">Fitur</a>
+<a href="#spesifikasi">Spesifikasi</a>
+<a href="#beli">Beli</a>
+</div>
+</div>
+
+
+<!-- product -->
+<div class="product" id="home">
+<h1>Galaxy S26 Ultra</h1>
+
+<p>
+Smartphone premium dengan Snapdragon 8 Elite Gen 5 for galaxy,
+kamera 200MP AI, dan layar AMOLED 6.9 inci ultra tajam.
+</p>
+
+<div class="warna">
+
+<input type="radio" name="warna" id="black" checked>
+<input type="radio" name="warna" id="white">
+<input type="radio" name="warna" id="silver">
+<input type="radio" name="warna" id="blue">
+
+<div class="gambar">
+<img src="s26-black.png" class="img black-img">
+<img src="s26-white.png" class="img white-img">
+<img src="s26-silver.png" class="img silver-img">
+<img src="s26-skyblue.png" class="img blue-img">
+</div>
+
+<div class="pilihan">
+<label for="black" class="color black"></label>
+<label for="white" class="color white"></label>
+<label for="silver" class="color silver"></label>
+<label for="blue" class="color blue"></label>
+</div>
+
+</div>
+
+<div class="price">Rp 24.499.000</div>
+<div class="old-price">Rp 27.499.000</div>
+
+<a href="#" class="btn">Pre Order</a>
+</div>
+
+
+<!-- FITUR -->
+<div class="fitur" id="fitur">
+
+<div class="card">
+<i class="fa-solid fa-microchip"></i>
+<h3>Snapdragon 8 Elite Gen 5</h3>
+<p>Performa super cepat generasi terbaru</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-camera"></i>
+<h3>Kamera 200MP</h3>
+<p>Foto detail dengan teknologi AI</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-mobile-screen"></i>
+<h3>AMOLED 6.9"</h3>
+<p>Layar besar jernih dan smooth</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-battery-full"></i>
+<h3>5000mAh</h3>
+<p>Baterai tahan lama & fast charging</p>
+</div>
+
+</div>
+
+
+
+<!-- SPESIFIKASI -->
+<div class="specs" id="spesifikasi">
+
+<h2>Spesifikasi</h2>
+
+<div class="spec-item">
+<div class="spec-title">Chipset</div>
+<div class="spec-value">Snapdragon 8 Elite Gen 5 for galaxy</div>
+</div>
+
+<div class="spec-item">
+<div class="spec-title">RAM</div>
+<div class="spec-value">12GB / 16GB</div>
+</div>
+
+<div class="spec-item">
+<div class="spec-title">Storage</div>
+<div class="spec-value">256GB / 512GB / 1TB</div>
+</div>
+
+<div class="spec-item">
+<div class="spec-title">Kamera</div>
+<div class="spec-value">200MP AI Camera</div>
+</div>
+
+<div class="spec-item">
+<div class="spec-title">Layar</div>
+<div class="spec-value">6.9" AMOLED 1440p</div>
+</div>
+
+<div class="spec-item">
+<div class="spec-title">Baterai</div>
+<div class="spec-value">5000mAh Fast Charging</div>
+</div>
+
+</div>
+
+
+<!-- pesan -->
+<div class="pesan" id="beli">
+<h2>Upgrade ke Galaxy AI Sekarang</h2>
+<a href="https://www.samsung.com/id/smartphones/galaxy-s26-ultra/buy/" target="_blank" class="btn">Beli Sekarang</a>
+</div>
+
+<footer>
+© Mustofa 2026. All rights reserved.
+</footer>
+</div>
+
+</body>
+</html>
