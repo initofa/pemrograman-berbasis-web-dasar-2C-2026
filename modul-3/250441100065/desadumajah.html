@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desa Dumajah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+  <!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
+
+    <!-- LOGO -->
+    <h1 class="font-bold text-xl text-green-700">Desa Dumajah</h1>
+
+    <!-- CHECKBOX -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+    <!-- HAMBURGER -->
+    <label for="menu-toggle" class="lg:hidden cursor-pointer flex flex-col gap-1 z-50">
+      <span class="w-6 h-0.5 bg-green-700 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-1.5"></span>
+      <span class="w-6 h-0.5 bg-green-700 transition-all duration-300 peer-checked:opacity-0"></span>
+      <span class="w-6 h-0.5 bg-green-700 transition-all duration-300 peer-checked:-rotate-45 peer-checked:-translate-y-1.5"></span>
+    </label>
+
+    <!-- MENU -->
+    <div class="absolute top-full right-0 w-full 
+                bg-white/70 backdrop-blur-lg shadow-md
+                max-h-0 overflow-hidden 
+                peer-checked:max-h-96 
+                transition-all duration-300 ease-in-out
+                lg:static lg:max-h-full lg:flex lg:items-center lg:w-auto lg:shadow-none lg:bg-transparent">
+
+      <div class="flex flex-col items-end lg:flex-row lg:items-center lg:space-x-6 font-medium text-right lg:text-left px-6 py-4 lg:p-0">
+        <a href="#home" class="block py-2 hover:text-green-600">Beranda</a>
+        <a href="#profil" class="block py-2 hover:text-green-600">Profil</a>
+        <a href="#visi" class="block py-2 hover:text-green-600">Visi Misi</a>
+        <a href="#potensi" class="block py-2 hover:text-green-600">Potensi</a>
+        <a href="#berita" class="block py-2 hover:text-green-600">Berita</a>
+        <a href="#kontak" class="mt-2 lg:mt-0 bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 transition">
+          Kontak
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+    <!-- HERO -->
+    <section id="home">
+      <div class="relative">
+        <img src="img/tani.jpg" class="w-full h-[400px] object-cover"/>
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div class="text-center text-white px-4">
+            <h1 class="text-4xl font-bold mb-4">
+              Selamat Datang di Desa Dumajah
+            </h1>
+            <p class="mb-4">Kecamatan Tanah Merah • Kabupaten Bangkalan</p>
+            <a href="#profil" class="bg-green-600 px-6 py-2 rounded">
+              Lihat Profil
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- PROFIL -->
+<section id="profil" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- IMAGE -->
+    <div class="flex justify-center">
+      <img
+        src="img/profildesa.jpg"
+        class="rounded-2xl shadow-lg w-72 mx-auto
+               transition-all duration-300 ease-in-out
+               
+               hover:scale-105 hover:shadow-2xl
+               active:scale-95 active:shadow-md"
+      />
+    </div>
+
+    <!-- TEXT -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-green-700">Profil Desa</h2>
+
+      <p class="text-gray-600 leading-relaxed text-justify">
+        Desa Dumajah merupakan desa di Kecamatan Tanah Merah, Kabupaten
+        Bangkalan yang memiliki masyarakat yang ramah dan menjunjung tinggi
+        nilai gotong royong. Desa ini memiliki potensi besar dalam bidang
+        pertanian, UMKM, dan budaya lokal.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- VISI MISI -->
+<section id="visi" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-8 items-stretch">
+      <!-- VISI -->
+      <div class="bg-white p-10 rounded-2xl shadow hover:shadow-lg transition flex flex-col justify-center items-center text-center h-full">
+        <h3 class="text-2xl font-bold mb-4 text-green-700">
+          VISI
+        </h3>
+        <p class="text-gray-600">
+          Menjadi desa yang maju, mandiri, dan sejahtera.
+        </p>
+      </div>
+      <!-- MISI -->
+      <div class="bg-white p-10 rounded-2xl shadow hover:shadow-lg transition flex flex-col justify-center items-center text-center h-full">
+        <h3 class="text-2xl font-bold mb-4 text-green-700">
+          MISI
+        </h3>
+        <ul class="text-gray-600 space-y-2">
+          <li>• Meningkatkan pelayanan masyarakat</li>
+          <li>• Mengembangkan potensi desa</li>
+          <li>• Meningkatkan kesejahteraan warga</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- POTENSI -->
+<section id="potensi" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Potensi Desa</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- PERTANIAN -->
+      <div class="bg-gray-50 p-8 rounded-2xl shadow hover:scale-105 transition text-center">
+        <i class="fa-solid fa-wheat-awn text-4xl text-green-600 mb-3"></i>
+        <h3 class="font-bold">Pertanian</h3>
+        <p class="text-sm text-gray-600">Hasil panen unggulan</p>
+      </div>
+      <!-- UMKM -->
+      <div class="bg-gray-50 p-8 rounded-2xl shadow hover:scale-105 transition text-center">
+        <i class="fa-solid fa-store text-4xl text-green-600 mb-3"></i>
+        <h3 class="font-bold">UMKM</h3>
+        <p class="text-sm text-gray-600">Produk lokal desa</p>
+      </div>
+      <!-- WISATA -->
+      <div class="bg-gray-50 p-8 rounded-2xl shadow hover:scale-105 transition text-center">
+        <i class="fa-solid fa-mountain-sun text-4xl text-green-600 mb-3"></i>
+        <h3 class="font-bold">Wisata</h3>
+        <p class="text-sm text-gray-600">Keindahan alam desa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- BERITA -->
+<section id="berita" class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-green-700">
+      Berita Desa
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- CARD 1 -->
+      <div class="group bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+        <div class="relative overflow-hidden">
+          <img src="img/Gotong Royong.jpg"
+            class="h-48 w-full object-cover transition duration-500 group-hover:scale-110"/>
+
+          <!-- overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1">Gotong Royong</h3>
+          <p class="text-sm text-gray-500 mb-2">12 Januari 2026</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Kegiatan gotong royong dilakukan oleh warga Desa Dumajah untuk 
+            membersihkan lingkungan dan mempererat kebersamaan antar masyarakat.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="group bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+        <div class="relative overflow-hidden">
+          <img src="img/Imunisasi.jpg"
+            class="h-48 w-full object-cover transition duration-500 group-hover:scale-110"/>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1">Imunisasi</h3>
+          <p class="text-sm text-gray-500 mb-2">20 Februari 2026</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Program imunisasi untuk balita dilakukan guna meningkatkan kesehatan 
+            dan mencegah penyakit sejak dini bagi anak-anak di desa.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="group bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+        <div class="relative overflow-hidden">
+          <img src="img/merahputih.jpg"
+            class="h-48 w-full object-cover transition duration-500 group-hover:scale-110"/>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+
+        <div class="p-5">
+          <h3 class="font-bold text-lg mb-1">
+            Pembangunan Koperasi Merah Putih
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">5 Maret 2026</p>
+          <p class="text-gray-600 text-sm leading-relaxed text-justify">
+            Pembangunan koperasi desa bertujuan untuk meningkatkan ekonomi 
+            masyarakat melalui usaha bersama dan pemberdayaan UMKM lokal.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-green-700 text-center">Kontak Desa</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+        <!-- INFORMASI + FORM -->
+        <div>
+          <p class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Desa Dumajah, Tanah Merah, Bangkalan</p>
+          <p class="mb-2"><i class="fa-solid fa-envelope me-2"></i>dumajah@email.com</p>
+          <p class="mb-6"><i class="fa-solid fa-phone me-2"></i>081762842351</p>
+        <!-- FORM -->
+        <form class="space-y-4">
+        <input type="text" placeholder="Nama Lengkap"
+        class="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+
+        <input type="email" placeholder="Email"
+        class="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+
+        <textarea placeholder="Pesan"
+        class="w-full border p-3 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+
+        <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
+        Kirim Pesan
+        </button>
+        </form>
+    </div>
+    <!-- MAPS DESA DUMAJAH -->
+    <div>
+        <iframe class="w-full min-h-[350px] rounded-xl shadow border" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Desa%20Dumajah%20Tanah%20Merah%20Bangkalan&output=embed">
+        </iframe>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+   <!-- FOOTER -->
+    <footer class="text-center p-6 bg-gray-200">
+      © 2026 Mustofa. All rights reserved.
+    </footer>
+  </body>
+</html>

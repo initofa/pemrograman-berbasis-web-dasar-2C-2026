@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio Mustofa 2026</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="text-gray-800 bg-gradient-to-b from-gray-200 via-white to-gray-300"
+  >
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white border-b">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 lg:px-10 relative"
+      >
+        <!-- LOGO -->
+        <h1 class="font-bold text-xl">MyPortofolio</h1>
+
+        <!-- CHECKBOX -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <!-- HAMBURGER -->
+        <label
+          for="menu-toggle"
+          class="lg:hidden cursor-pointer flex flex-col justify-center items-center w-8 h-8 relative"
+        >
+          <!-- GARIS ATAS -->
+          <span
+            class="absolute top-1 w-6 h-0.5 bg-black transition-all duration-300 ease-in-out peer-checked:rotate-45 peer-checked:top-3.5"
+          ></span>
+
+          <!-- GARIS TENGAH -->
+          <span
+            class="absolute top-3.5 w-6 h-0.5 bg-black transition-all duration-300 ease-in-out peer-checked:opacity-0"
+          ></span>
+
+          <!-- GARIS BAWAH -->
+          <span
+            class="absolute bottom-1 w-6 h-0.5 bg-black transition-all duration-300 ease-in-out peer-checked:-rotate-45 peer-checked:bottom-3.5"
+          ></span>
+        </label>
+
+        <!-- MENU -->
+        <div
+          class="absolute left-0 top-full w-full bg-white shadow-md overflow-hidden max-h-0 peer-checked:max-h-96 transition-all duration-300 ease-in-out lg:static lg:max-h-full lg:flex lg:items-center lg:w-auto lg:shadow-none"
+        >
+          <div
+            class="flex flex-col lg:flex-row lg:space-x-6 font-medium text-center"
+          >
+            <a href="#home" class="block py-3 hover:text-blue-600">Home</a>
+            <a href="#about" class="block py-3 hover:text-blue-600">About</a>
+            <a href="#skill" class="block py-3 hover:text-blue-600">Skill</a>
+            <a href="#experience" class="block py-3 hover:text-blue-600"
+              >Experience</a
+            >
+            <a href="#project" class="block py-3 hover:text-blue-600"
+              >Project</a
+            >
+            <a href="#contact" class="block py-3 hover:text-blue-600"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <section
+      id="home"
+      class="max-w-7xl mx-auto px-6 pt-24 pb-16 grid md:grid-cols-2 gap-10 items-center md:px-6 lg:px-10"
+    >
+      <div>
+        <p class="text-gray-500">Hello I'm</p>
+
+        <h1 class="text-4xl font-bold mb-4">Mustofa</h1>
+
+        <p class="text-gray-600 mb-6">
+          Mahasiswa Sistem Informasi yang tertarik pada teknologi dan terus
+          belajar untuk meningkatkan kemampuan diri.
+        </p>
+
+        <button
+          class="bg-black text-white px-6 py-2 rounded-lg transition duration-300 ease-in-out hover:bg-blue-600 hover:scale-105 hover:shadow-xl active:scale-95"
+        >
+          <a href="#project" class="text-white no-underline"> View Project </a>
+        </button>
+
+        <button class="border px-6 py-2 rounded-lg shadow-xl">
+          Download CV
+        </button>
+      </div>
+
+      <img
+        src="gambar/ngoding.png"
+        class="rounded-xl shadow-xl w-3/4 mx-auto transition duration-500 ease-in-out hover:scale-105 hover:rotate-1 hover:shadow-2xl"
+      />
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-white py-16">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:px-6 lg:px-10"
+      >
+        <img
+          src="gambar/fotoku.jpeg"
+          class="rounded-xl shadow-xl w-3/4 mx-auto transition duration-500 ease-in-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl"
+        />
+
+        <div>
+          <h2 class="text-3xl font-bold mb-4">About Me</h2>
+
+          <p class="text-gray-600 text-justify">
+            Lulusan SMK Rekayasa Perangkat Lunak yang saat ini sedang menempuh
+            pendidikan di bidang Sistem Informasi. Memiliki ketertarikan yang
+            besar terhadap teknologi dan pengembangan sistem, serta terbiasa
+            mempelajari hal-hal baru secara mandiri. Memiliki dasar pengetahuan
+            dalam pemrograman dan pengelolaan sistem yang terus dikembangkan
+            melalui praktik dan pembelajaran berkelanjutan. Saya merupakan
+            pribadi yang disiplin, bertanggung jawab, dan memiliki kemampuan
+            berpikir analitis dalam menyelesaikan masalah, mampu bekerja secara
+            individu maupun dalam tim, serta mudah beradaptasi dengan lingkungan
+            dan teknologi baru. Berkomitmen untuk terus meningkatkan kemampuan
+            dan siap berkontribusi secara profesional dalam dunia kerja.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skill" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">My Skills</h2>
+
+        <!-- GRID -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <!-- CARD -->
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/html.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-orange-500 transition"
+            >
+              HTML
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/css.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-blue-500 transition"
+            >
+              CSS
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/JavaScript.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-yellow-500 transition"
+            >
+              JavaScript
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/tailwindcss.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-sky-500 transition"
+            >
+              Tailwind
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/bootstrap.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-purple-500 transition"
+            >
+              Bootstrap
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/php.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-indigo-500 transition"
+            >
+              PHP
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/laravel.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-red-500 transition"
+            >
+              Laravel
+            </p>
+          </div>
+
+          <div
+            class="group bg-white/80 backdrop-blur-md p-6 rounded-2xl text-center shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+          >
+            <img
+              src="icon/python.svg"
+              class="w-12 mx-auto mb-3 group-hover:scale-110 transition"
+            />
+            <p
+              class="text-sm font-semibold text-gray-700 group-hover:text-yellow-400 transition"
+            >
+              Python
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-6 md:px-6 lg:px-10">
+        <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
+
+        <div class="space-y-8">
+          <!-- MAGANG -->
+          <div class="p-6 bg-gray-50 rounded-xl shadow border-l-4 border-black">
+            <h3 class="text-xl font-bold">Magang - CV. Neev Solusindo</h3>
+            <p class="text-gray-600 mb-2">
+              Konsultan IT, Software, CCTV, dan Jaringan
+            </p>
+            <p class="text-sm text-gray-500 mb-3">Juli 2024 - Desember 2024</p>
+
+            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+              <li>Mengembangkan aplikasi kasir</li>
+              <li>Membuat sistem absensi siswa</li>
+              <li>Melakukan instalasi dan perbaikan CCTV</li>
+              <li>Merakit dan memperbaiki komputer</li>
+            </ul>
+          </div>
+
+          <!-- ORGANISASI -->
+          <div class="p-6 bg-gray-50 rounded-xl shadow border-l-4 border-black">
+            <h3 class="text-xl font-bold">Bangkalan Developer</h3>
+            <p class="text-gray-600 mb-2">
+              Komunitas pengembang dan praktisi IT di Bangkalan
+            </p>
+            <p class="text-sm text-gray-500 mb-3">
+              Content Creative • 2025 - Sekarang
+            </p>
+
+            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+              <li>Desain konten</li>
+              <li>Publikasi media</li>
+              <li>Dokumentasi kegiatan (PDD)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section id="project" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 md:px-6 lg:px-10">
+        <h2 class="text-4xl font-bold text-center mb-16">My Project</h2>
+
+        <div class="space-y-20">
+          <!-- PROJECT 1 -->
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <img
+              src="gambar/jujurmart.png"
+              class="w-full rounded-2xl shadow-lg hover:scale-105 transition"
+            />
+
+            <div>
+              <h3 class="text-2xl font-bold mb-3">JujurMart</h3>
+              <p class="text-gray-600 leading-relaxed text-justify">
+                Aplikasi kantin tanpa kasir yang memudahkan proses jual beli di
+                lingkungan sekolah. Sistem ini memungkinkan superadmin mengelola
+                admin (siswa/guru) yang ingin berjualan tanpa mengganggu
+                kegiatan belajar. Pembeli cukup mengunggah bukti transaksi
+                sebagai bentuk kejujuran dalam bertransaksi.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-3">HiuHiu</h3>
+              <p class="text-gray-600 leading-relaxed text-justify">
+                Aplikasi kasir berbasis web yang dapat digunakan di berbagai
+                perangkat, termasuk mobile. Memiliki fitur manajemen stok,
+                daftar harga, serta pencetakan struk. Dirancang fleksibel
+                sehingga dapat digunakan oleh banyak toko dalam satu sistem.
+              </p>
+            </div>
+
+            <img
+              src="gambar/hiuhiu.png"
+              class="w-full rounded-2xl shadow-lg hover:scale-105 transition"
+            />
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <img
+              src="gambar/skullman.png"
+              class="w-full rounded-2xl shadow-lg hover:scale-105 transition"
+            />
+
+            <div>
+              <h3 class="text-2xl font-bold mb-3">Skullman</h3>
+              <p class="text-gray-600 leading-relaxed text-justify">
+                Aplikasi absensi digital yang membantu proses pencatatan
+                kehadiran menjadi lebih praktis dan terstruktur. Sistem ini
+                menggantikan metode manual sehingga lebih efisien dan mudah
+                digunakan.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROJECT 4 -->
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-3">Reservasi Hotel</h3>
+              <p class="text-gray-600 leading-relaxed text-justify">
+                Aplikasi reservasi hotel berbasis web yang dikembangkan
+                menggunakan Python dan Streamlit. Memungkinkan pengguna
+                melakukan pemesanan kamar, memilih tipe kamar, serta mengelola
+                data reservasi dengan mudah. Dirancang sederhana namun
+                fungsional seperti sistem reservasi hotel pada umumnya.
+              </p>
+            </div>
+
+            <img
+              src="gambar/reservasihotil.png"
+              class="w-full rounded-2xl shadow-lg hover:scale-105 transition"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center md:px-6 lg:px-10">
+        <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+
+        <!-- ICON -->
+        <div class="flex justify-center gap-6 mb-8">
+          <a href="https://wa.me/6281999925324?" target="_blank">
+            <img src="icon/wa.svg" class="w-8 hover:scale-110 transition" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/m.musthofaa?igsh=enE2bG5peTRvZXA4"
+            target="_blank"
+          >
+            <img
+              src="icon/instagram.svg"
+              class="w-8 hover:scale-110 transition"
+            />
+          </a>
+
+          <a href="https://github.com/initofa" target="_blank">
+            <img src="icon/github.svg" class="w-8 hover:scale-110 transition" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mustofa-ba1764403/"
+            target="_blank"
+          >
+            <img
+              src="icon/linkedin.svg"
+              class="w-8 hover:scale-110 transition"
+            />
+          </a>
+        </div>
+
+        <!-- FORM -->
+        <form class="max-w-md mx-auto space-y-4">
+          <input
+            type="text"
+            placeholder="Nama Lengkap"
+            class="w-full border p-2 rounded"
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full border p-2 rounded"
+          />
+
+          <textarea
+            placeholder="Pesan"
+            class="w-full border p-2 rounded"
+          ></textarea>
+
+          <button
+            class="bg-black text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center p-6 bg-gray-200">
+      © 2026 Mustofa. All rights reserved.
+    </footer>
+  </body>
+</html>
