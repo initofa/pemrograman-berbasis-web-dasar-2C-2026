@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BzMe - UTS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+      .dark-mode nav {
+        background-color: #101722 !important;
+      }
+
+      .dark-mode section {
+        background-color: black !important;
+        color: white !important;
+      }
+
+      .dark-mode .bg-white {
+        background-color: #101722 !important;
+        color: white !important;
+      }
+
+      .dark-mode p,
+      .dark-mode li,
+      .dark-mode h1,
+      .dark-mode h2,
+      .dark-mode h3 {
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f8f8f8] text-gray-800">
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-white shadow-sm z-50">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="img/Logo.png" alt="Logo" class="w-8 h-8 object-contain" />
+          <h1 class="font-bold text-[#8a38f5] text-lg ml-2">BzMe</h1>
+        </div>
+
+        <!-- Menu -->
+        <div
+          class="hidden md:flex items-center text-sm font-medium text-[#8a38f5]"
+        >
+          <a href="#home" class="hover:text-[#ff9335] transition mx-3">Home</a>
+          <a href="#about" class="hover:text-[#ff9335] transition mx-3"
+            >About</a
+          >
+          <a href="#services" class="hover:text-[#ff9335] transition mx-3"
+            >Services</a
+          >
+          <a href="#contact" class="hover:text-[#ff9335] transition mx-3"
+            >Contact</a
+          >
+          <a href="#blog" class="hover:text-[#ff9335] transition mx-3">Blog</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <!-- Dark Mode Toggle -->
+          <div
+            onclick="toggleDarkMode()"
+            id="themeToggle"
+            class="relative w-18 h-9 bg-gray-200 rounded-full cursor-pointer transition duration-500 flex items-center px-1 shadow-inner"
+          >
+            <div
+              id="toggleCircle"
+              class="w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center transition duration-500"
+            >
+              <img
+                id="themeIcon"
+                src="img/moon.svg"
+                alt="Moon Icon"
+                class="w-5 h-5"
+              />
+            </div>
+          </div>
+
+          <!-- BUTTON -->
+          <a
+            href="form.html"
+            class="bg-[#ff9335] text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-orange-500 transition inline-block"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero -->
+    <section id="home" class="py-16 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-10"
+      >
+        <div>
+          <h2 class="text-5xl font-bold leading-tight">
+            We Create <br />
+            <span class="text-[#8a38f5]">Solutions</span> For <br />
+            Your Business
+          </h2>
+          <p class="text-gray-500 mt-5 leading-relaxed">
+            We provide intelligent technology solutions to optimize efficiency
+            and accelerate the growth of your business operations.
+          </p>
+          <button
+            class="mt-6 bg-[#ff9335] text-white px-6 py-3 rounded-md font-medium"
+          >
+            Get Started
+          </button>
+        </div>
+
+        <div>
+          <img src="img/1.png" alt="Hero" class="w-full max-w-md mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-[#fafafa]">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <!-- Title -->
+        <h2 class="text-3xl font-bold">
+          We Provide The Best
+          <span class="text-[#8a38f5]">Services</span>
+        </h2>
+
+        <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+          We deliver high-quality technology services to improve your business
+          productivity.
+        </p>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-4 gap-6 mt-12">
+          <!-- Card 1 -->
+          <div
+            class="bg-white border rounded-xl p-6 shadow-[0_12px_40px_rgba(138,56,245,0.7)] text-left"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-[#ff9335] items-center justify-center"
+            >
+              <img
+                src="img/icon 1.png"
+                alt="icon"
+                class="w-10 h-10 object-contain mb-4"
+              />
+            </div>
+            <h3 class="font-semibold text-lg">Seo/Sem</h3>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+              Improve search visibility and grow your business online.
+            </p>
+
+            <div class="flex justify-center mt-5">
+              <button
+                class="text-xs bg-[#8a38f5] text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+              >
+                Click Here
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white border rounded-xl p-6 shadow-[0_12px_40px_rgba(138,56,245,0.7)] text-left"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-[#ff9335] items-center justify-center"
+            >
+              <img
+                src="img/icon 1.png"
+                alt="icon"
+                class="w-10 h-10 object-contain mb-4"
+              />
+            </div>
+            <h3 class="font-semibold text-lg">Viral Campaign</h3>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+              Build stronger campaigns to reach more customers faster.
+            </p>
+
+            <div class="flex justify-center mt-5">
+              <button
+                class="text-xs bg-[#8a38f5] text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+              >
+                Click Here
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white border rounded-xl p-6 shadow-[0_12px_40px_rgba(138,56,245,0.7)] text-left"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-[#ff9335] items-center justify-center"
+            >
+              <img
+                src="img/icon 2.png"
+                alt="icon"
+                class="w-10 h-10 object-contain mb-4"
+              />
+            </div>
+            <h3 class="font-semibold text-lg">Marketing</h3>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+              Smart marketing strategies for better business performance.
+            </p>
+
+            <div class="flex justify-center mt-5">
+              <button
+                class="text-xs bg-[#8a38f5] text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+              >
+                Click Here
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white border rounded-xl p-6 shadow-[0_12px_40px_rgba(138,56,245,0.7)] text-left"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-[#ff9335] flex items-center justify-center"
+            >
+              <img
+                src="img/icon 3.png"
+                alt="icon"
+                class="w-6 h-6 object-contain"
+              />
+            </div>
+            <h3 class="font-semibold text-lg">Others</h3>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+              Additional digital solutions for your business needs.
+            </p>
+
+            <div class="flex justify-center mt-5">
+              <button
+                class="text-xs bg-[#8a38f5] text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+              >
+                Click Here
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#f4c96a]">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <img src="img/2.png" alt="About" class="w-full max-w-md mx-auto" />
+        </div>
+
+        <div>
+          <h2 class="text-4xl font-bold">
+            Simple <span class="text-[#8a38f5]">Solutions!</span>
+          </h2>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            We understand that no two are alike. That's why we take the time to
+            truly understand your unique goals, challenges, and vision.
+          </p>
+          <div class="flex gap-4 mt-6">
+            <button class="bg-[#ff9335] text-white px-6 py-3 rounded-md">
+              Get Started
+            </button>
+            <button
+              class="border border-[#8a38f5] text-[#8a38f5] px-6 py-3 rounded-md"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-20 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h2 class="text-4xl font-bold">
+            Our <span class="text-[#8a38f5]">Agency</span>
+          </h2>
+          <p class="mt-4 text-gray-500 leading-relaxed">
+            We believe in the power of data. Our analytics-driven approach
+            allows us to make informed strategic decisions.
+          </p>
+          <button class="mt-6 bg-[#ff9335] text-white px-6 py-3 rounded-md">
+            Read More
+          </button>
+        </div>
+
+        <div>
+          <img src="img/3.png" alt="Agency" class="w-full max-w-md mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-[#fafafa]">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <!-- Title -->
+        <h2 class="text-3xl font-bold">
+          What <span class="text-[#ff9335]">Clients</span> Say!
+        </h2>
+
+        <p class="text-gray-500 mt-2">
+          See How Our Digital Marketing Agency Helped Clients
+        </p>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <!-- Card 1 -->
+          <div
+            class="bg-white p-5 rounded-xl shadow-md text-left border border-gray-100"
+          >
+            <h3 class="text-[#ff9335] font-bold text-sm">Johnny Suh</h3>
+            <p class="text-[11px] text-gray-500 font-medium mt-1">
+              Executive CEO
+            </p>
+
+            <p class="text-[11px] text-gray-400 leading-relaxed mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              metus urna, pulvinar id ipsum eu.
+            </p>
+
+            <div class="flex items-center gap-1 mt-4">
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 1.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 1.png" alt="star" class="w-4 h-4" />
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white p-5 rounded-xl shadow-md text-left border border-gray-100"
+          >
+            <h3 class="text-[#ff9335] font-bold text-sm">Nashley Juan</h3>
+            <p class="text-[11px] text-gray-500 font-medium mt-1">
+              Executive CEO
+            </p>
+
+            <p class="text-[11px] text-gray-400 leading-relaxed mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              metus urna, pulvinar id ipsum eu.
+            </p>
+
+            <div class="flex items-center gap-1 mt-4">
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 1.png" alt="star" class="w-4 h-4" />
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white p-5 rounded-xl shadow-md text-left border border-gray-100"
+          >
+            <h3 class="text-[#ff9335] font-bold text-sm">Mark Z.</h3>
+            <p class="text-[11px] text-gray-500 font-medium mt-1">
+              Executive CEO
+            </p>
+
+            <p class="text-[11px] text-gray-400 leading-relaxed mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              metus urna, pulvinar id ipsum eu.
+            </p>
+
+            <div class="flex items-center gap-1 mt-4">
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+              <img src="img/Star 2.png" alt="star" class="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-[#FFD47E] pt-20 pb-9 relative">
+      <div
+        class="max-w-6xl mx-auto px-6 absolute left-1/2 -translate-x-1/2 -top-10 w-full"
+      >
+        <div
+          class="bg-[#FF9335] rounded-2xl px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 shadow-lg"
+        >
+          <h2 class="text-white text-lg md:text-xl font-semibold">
+            Ready To Get Started?
+          </h2>
+          <button class="border-2 border-white text-white px-6 py-2 rounded-xl">
+            Contact Us
+          </button>
+        </div>
+      </div>
+      <div
+        class="max-w-6xl mx-auto px-6 mt-16 grid md:grid-cols-4 gap-8 text-gray-700"
+      >
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="img/Logo.png" class="w-12" />
+            <h2 class="font-bold text-lg text-purple-600">BzMe</h2>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">Company</h3>
+          <ul class="space-y-1 text-sm">
+            <li>About</li>
+            <li>Contact</li>
+            <li>Careers</li>
+            <li>Team</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">Designs</h3>
+          <ul class="space-y-1 text-sm">
+            <li>Find a Designer</li>
+            <li>Discover Inspiration</li>
+            <li>Pricing</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2">Support</h3>
+          <ul class="space-y-1 text-sm">
+            <li>Privacy Policy</li>
+            <li>Terms</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+
+        const icon = document.getElementById("themeIcon");
+        const circle = document.getElementById("toggleCircle");
+        const toggle = document.getElementById("themeToggle");
+
+        if (document.body.classList.contains("dark-mode")) {
+          circle.classList.add("translate-x-8");
+          toggle.classList.remove("bg-gray-200");
+          toggle.classList.add("bg-[#8a38f5]");
+          icon.src = "img/sun.svg";
+          icon.alt = "Sun Icon";
+        } else {
+          circle.classList.remove("translate-x-8");
+          toggle.classList.remove("bg-[#8a38f5]");
+          toggle.classList.add("bg-gray-200");
+          icon.src = "img/moon.svg";
+          icon.alt = "Moon Icon";
+        }
+      }
+    </script>
+  </body>
+</html>

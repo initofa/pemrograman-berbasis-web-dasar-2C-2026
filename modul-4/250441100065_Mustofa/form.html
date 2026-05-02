@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - BzMe</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .dark-mode {
+        background-color: #0f172a;
+        color: white;
+      }
+
+      .dark-mode .bg-white {
+        background-color: #111827 !important;
+        color: white !important;
+      }
+
+      .dark-mode input {
+        background-color: #1f2937 !important;
+        color: white !important;
+        border-color: #374151 !important;
+      }
+
+      .dark-mode label,
+      .dark-mode h3,
+      .dark-mode p:not(.error-text) {
+        color: white !important;
+      }
+
+      .error-text {
+        color: #ef4444 !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#f8f8f8]">
+    <div class="min-h-screen flex">
+      <!-- LEFT SIDE -->
+      <div
+        class="w-1/2 bg-[#8a38f5] flex items-center justify-center relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-[#8a38f5] to-[#6f2bd8]"
+        ></div>
+
+        <div class="relative z-10 text-center px-10">
+          <img src="img/1.png" alt="Illustration" class="w-[420px] mx-auto" />
+          <h2 class="text-white text-3xl font-bold mt-6">Welcome to BzMe</h2>
+          <p class="text-white/80 text-sm mt-3 max-w-md mx-auto">
+            Create your account and start building smart digital solutions for
+            your business growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="w-1/2 bg-white flex items-start justify-center">
+        <div class="w-[380px] pt-0">
+          <!-- LOGO + TOGGLE -->
+          <div class="flex items-center justify-between pt-4 mb-2">
+            <!-- LOGO -->
+            <div class="flex items-center gap-2">
+              <img src="img/Logo.png" alt="Logo" class="w-8 h-8" />
+              <h2 class="text-[#8a38f5] text-xl font-bold">BzMe</h2>
+            </div>
+
+            <!-- TOGGLE -->
+            <div
+              onclick="toggleDarkMode()"
+              id="themeToggle"
+              class="relative w-18 h-9 bg-gray-200 rounded-full cursor-pointer transition duration-500 flex items-center px-1 shadow-inner"
+            >
+              <div
+                id="toggleCircle"
+                class="w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center transition duration-500"
+              >
+                <img
+                  id="themeIcon"
+                  src="img/moon.svg"
+                  alt="Moon Icon"
+                  class="w-5 h-5"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Create Account</h3>
+
+          <form id="signupForm" class="space-y-4">
+            <!-- EMAIL -->
+            <div>
+              <label class="text-sm text-gray-600">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                class="w-full mt-1 px-4 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#8a38f5]"
+              />
+              <p
+                id="emailError"
+                class="error-text text-xs mt-1 min-h-[18px]"
+              ></p>
+            </div>
+
+            <!-- NAME -->
+            <div>
+              <label class="text-sm text-gray-600">Full Name</label>
+              <input
+                id="fullname"
+                type="text"
+                placeholder="Enter your full name"
+                class="w-full mt-1 px-4 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#8a38f5]"
+              />
+              <p
+                id="nameError"
+                class="error-text text-xs mt-1 min-h-[18px]"
+              ></p>
+            </div>
+
+            <!-- PASSWORD -->
+            <div>
+              <label class="text-sm text-gray-600">Password</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                class="w-full mt-1 px-4 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#8a38f5]"
+              />
+              <p
+                id="passwordError"
+                class="error-text text-xs mt-1 min-h-[18px]"
+              ></p>
+            </div>
+
+            <!-- BUTTON -->
+            <button
+              type="submit"
+              class="w-full bg-[#ff9335] text-white py-2.5 rounded-full text-sm font-semibold hover:bg-orange-500 transition"
+            >
+              Sign Up
+            </button>
+
+            <!-- GOOGLE BUTTON -->
+            <button
+              type="button"
+              class="w-full border border-gray-300 py-2.5 rounded-full text-sm flex items-center justify-center gap-3 hover:bg-gray-50 transition"
+            >
+              <img src="img/icongoogle.svg" class="w-4 h-4" />
+              Sign Up with Google
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="succas"
+      class="fixed inset-0 hidden items-start justify-center pt-32 bg-black/70 z-50"
+    >
+      <div
+        class="bg-white px-10 py-8 rounded-xl shadow-2xl text-center w-[450px]"
+      >
+        <h2 class="text-2xl font-bold text-green-600 mb-3">
+          Registrasi Berhasil!
+        </h2>
+
+        <p class="text-gray-600 text-base leading-relaxed">
+          Data berhasil disimpan dan Anda akan diarahkan ke halaman login.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      let form = document.getElementById("signupForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let fullname = document.getElementById("fullname").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+        let passwordError = document.getElementById("passwordError");
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        passwordError.textContent = "";
+
+        let valid = true;
+
+        // FULL NAME
+        if (fullname === "") {
+          nameError.textContent = "Full Name wajib diisi";
+          valid = false;
+        }
+
+        // EMAIL
+        if (email === "") {
+          emailError.textContent = "Email wajib diisi";
+          valid = false;
+        } else if (!email.includes("@") || !email.includes(".")) {
+          emailError.textContent = "Format email tidak valid";
+          valid = false;
+        }
+
+        // PASSWORD
+        if (password === "") {
+          passwordError.textContent = "Password wajib diisi";
+          valid = false;
+        } else if (password.length < 8) {
+          passwordError.textContent = "Minimal 8 karakter";
+          valid = false;
+        }
+
+        if (valid) {
+          let succas = document.getElementById("succas");
+
+          succas.classList.remove("hidden");
+          succas.classList.add("flex");
+
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1500);
+        }
+      });
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+
+        const icon = document.getElementById("themeIcon");
+        const circle = document.getElementById("toggleCircle");
+        const toggle = document.getElementById("themeToggle");
+
+        if (document.body.classList.contains("dark-mode")) {
+          circle.classList.add("translate-x-8");
+          toggle.classList.remove("bg-gray-200");
+          toggle.classList.add("bg-[#8a38f5]");
+          icon.src = "img/sun.svg";
+          icon.alt = "Sun Icon";
+        } else {
+          circle.classList.remove("translate-x-8");
+          toggle.classList.remove("bg-[#8a38f5]");
+          toggle.classList.add("bg-gray-200");
+          icon.src = "img/moon.svg";
+          icon.alt = "Moon Icon";
+        }
+      }
+    </script>
+  </body>
+</html>
